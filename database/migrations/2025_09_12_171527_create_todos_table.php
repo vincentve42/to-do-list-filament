@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->text('keterangan');
             $table->text('status');
+            $table->text('batas');
+            $table->bigInteger('user_id')->references('id')->on('user')->onDelete()->cascade();
         });
     }
 

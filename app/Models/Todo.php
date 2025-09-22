@@ -9,6 +9,8 @@ class Todo extends Model
 {
     protected $table = 'todo';
 
+    protected $fillable = ['keterangan','status','user_id','batas'];
+
     public function User() : BelongsTo
     {
         return $this->belongsTo(User::class);

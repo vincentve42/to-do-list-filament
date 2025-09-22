@@ -10,7 +10,7 @@ class OverallWidget extends BaseWidget
     protected function getStats(): array
     {
         return [
-            //
+            Stat::make('Completed', Auth::user()->Todo()->where('status','Completed')->get())->chart([10,10,10])->chartColor('success'),
         ];
     }
 }
